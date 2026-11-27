@@ -3,91 +3,150 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <title>LinguaLink — Find your conversation partner</title>
+  <meta name="description" content="Practice a language through friendly one-to-one video calls with a language exchange partner.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- =========================================================
-       HEADER: logo text + navigation.
-       Each link points to a "view" further down the page (#home, #explore, #about).
-       ========================================================= -->
   <header class="site-header">
-    <a class="brand" href="#home" id="brand-name">YourStartup</a>
-    <nav aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
-      <a href="#about">About</a>
+    <a class="brand" href="#home" aria-label="LinguaLink home">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span>lingualink</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#partners">Find a partner</a>
+      <a href="#pricing">Pricing</a>
     </nav>
+    <a class="header-cta" href="#partners">Start speaking <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
-
-    <!-- =======================================================
-         VIEW 1: HOME — what you do, for whom, and why it matters.
-         ======================================================= -->
-    <section id="home" data-view>
-      <div class="hero">
-        <p class="eyebrow">Prototype</p>
-        <h1 id="tagline">One sentence that says what your startup does.</h1>
-        <p class="lead" id="pitch">
-          Who is your customer, what problem do they have, and why is your
-          solution better than what they use today?
-        </p>
-        <a class="button" href="#explore">See it in action</a>
-      </div>
-
-      <div class="steps">
-        <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
+    <section class="hero page-width" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A little practice goes a long way</p>
+        <h1>Real people.<br><span>Real conversation.</span></h1>
+        <p class="hero-lead">Your next language breakthrough is a conversation away. Meet a friendly practice partner and learn together, one video call at a time.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#partners">Find your partner <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
-        </div>
-        <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
+        <div class="social-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>AM</span><span>JL</span><span>SK</span><span>+</span></div>
+          <p><strong>A world of voices</strong><br>Practice with learners everywhere</p>
         </div>
       </div>
+      <div class="hero-art" aria-label="Illustration of two language partners on a video call">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="call-window">
+          <div class="call-topbar"><span class="call-live"><i></i> LIVE PRACTICE</span><span class="call-time">24:08</span></div>
+          <div class="call-people">
+            <div class="call-person person-left"><span class="person-emoji" aria-hidden="true">👩🏽‍🦱</span><span class="person-name">Sofia <small>Barcelona, Spain</small></span><span class="speaking-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="call-person person-right"><span class="person-emoji" aria-hidden="true">👨🏻‍🦰</span><span class="person-name">Leo <small>Toronto, Canada</small></span><span class="language-bubble">Hola! 👋</span></div>
+          </div>
+          <div class="call-controls"><span class="control-icon">◖</span><span class="control-icon">⌕</span><span class="control-icon control-end">×</span><span class="control-icon">☷</span><span class="control-icon">•••</span></div>
+        </div>
+        <div class="floating-note note-top"><span class="note-flag">🇪🇸</span><span><strong>Spanish</strong><small>Practice together</small></span></div>
+        <div class="floating-note note-bottom"><span class="note-sparkle">✳</span><span><strong>Better every call</strong><small>Learn by sharing</small></span></div>
+      </div>
     </section>
 
-    <!-- =======================================================
-         VIEW 2: EXPLORE — a list built from the fake data in data.js.
-         ======================================================= -->
-    <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
-
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
-
-      <p class="muted" id="saved-count"></p>
-      <div class="grid" id="listing-grid"></div>
-      <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
+    <section class="language-strip" aria-label="Languages you can practice">
+      <div class="page-width strip-inner">
+        <span class="strip-label">SAY HELLO IN A NEW LANGUAGE</span>
+        <div class="language-list"><span>🇪🇸 <b>Spanish</b></span><span>🇫🇷 <b>French</b></span><span>🇯🇵 <b>Japanese</b></span><span>🇩🇪 <b>German</b></span><span>🇮🇹 <b>Italian</b></span><span>＋ More</span></div>
+      </div>
     </section>
 
-    <!-- =======================================================
-         VIEW 3: ABOUT — your team and your story.
-         ======================================================= -->
-    <section id="about" data-view hidden>
-      <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
+    <section class="how-section section-space page-width" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">LESS SCROLLING, MORE SPEAKING</p>
+        <h2>Language learning,<br><span>made human.</span></h2>
+        <p>Forget perfect grammar. Start with a hello, and let the conversation take you somewhere new.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span><div class="step-icon icon-match" aria-hidden="true">⌕</div>
+          <h3>Tell us what you speak</h3><p>Choose the language you know and the one you’re ready to practice.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span><div class="step-icon icon-pair" aria-hidden="true">↗</div>
+          <h3>Meet your match</h3><p>We connect you with someone who wants to learn what you know, too.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span><div class="step-icon icon-talk" aria-hidden="true">☏</div>
+          <h3>Talk, learn, repeat</h3><p>Hop on a video call, trade languages, and make progress together.</p>
+        </article>
+      </div>
     </section>
 
+    <section class="partners-section section-space" id="partners">
+      <div class="page-width">
+        <div class="partners-heading">
+          <div><p class="eyebrow">YOUR PEOPLE ARE OUT THERE</p><h2>Meet your next <span>practice partner.</span></h2></div>
+          <div class="partners-side">
+            <p>Every great conversation starts with one hello.<br>Find someone learning your language, too.</p>
+            <div class="points-balance" aria-label="Your practice points">
+              <span aria-hidden="true">✦</span><strong id="points-total">0</strong><span>practice points</span>
+            </div>
+          </div>
+        </div>
+        <form class="match-form" id="match-form">
+          <label> I speak
+            <select id="known-language" name="known-language">
+              <option>English</option><option>Spanish</option><option>French</option><option>Japanese</option><option>German</option><option>Italian</option><option>Portuguese</option>
+            </select>
+          </label>
+          <span class="swap-icon" aria-hidden="true">⇄</span>
+          <label> I want to practice
+            <select id="practice-language" name="practice-language">
+              <option>Spanish</option><option>French</option><option>Japanese</option><option>German</option><option>Italian</option><option>Portuguese</option><option>English</option>
+            </select>
+          </label>
+          <label> Chat duration
+            <select id="chat-duration" name="chat-duration">
+              <option value="1">1 minute</option><option value="5" selected>5 minutes</option><option value="10">10 minutes</option>
+            </select>
+          </label>
+          <button class="button button-dark match-button" type="submit">Find my matches <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="match-status" id="match-status" aria-live="polite"></p>
+        <section class="practice-panel" id="practice-panel" aria-live="polite" hidden></section>
+        <div class="partner-grid" id="listing-grid"></div>
+        <p class="empty-message" id="empty-message" hidden>No exact matches just yet. Try another language combination.</p>
+      </div>
+    </section>
+
+    <section class="pricing-section section-space page-width" id="pricing">
+      <div class="pricing-intro">
+        <p class="eyebrow">YOUR JOURNEY, YOUR PACE</p>
+        <h2>Good things grow<br><span>with practice.</span></h2>
+        <p>Start small or make language learning your thing. Every plan brings you closer to confident conversations.</p>
+        <div class="billing-note"><span class="billing-check">✓</span> Simple monthly plans. Cancel any time.</div>
+      </div>
+      <div class="pricing-grid" id="pricing-grid"></div>
+      <p class="plan-notice" id="plan-notice" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="closing-cta">
+      <div class="page-width closing-inner">
+        <div><p class="eyebrow">YOUR FIRST HELLO IS WAITING</p><h2>Ready to find your voice?</h2><p>Meet a language partner and make your next conversation count.</p></div>
+        <a class="button button-light" href="#partners">Find your partner <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="about-section page-width" id="about">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <p>LinguaLink is a student project exploring how language learners can practice together through friendly video calls.</p>
+    </section>
   </main>
 
-  <!-- Keep this footer. Your site must say it is a student project. -->
   <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">L</span><span>lingualink</span></a>
     <p>Student prototype for BSAD 281 at St. Francis Xavier University. Not a real company — all data is fictional.</p>
+    <a href="#home">Back to top ↑</a>
   </footer>
-
-  <!-- Scripts load in this order: data first, then the code that uses it. -->
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
